@@ -32,9 +32,9 @@ spec:
           #  - containerPort: {{ .Values.images.objectengine.port }}
           #    hostPort: {{ .Values.images.objectengine.nodePort }}
           #    protocol: {{ .Values.deployment.protocol }}
-          #resources:
-           #limits:
-           #   nvidia.com/gpu: 1
+          resources:
+           limits:
+              nvidia.com/gpu: 1
           volumeMounts:
             - name: shared-data
               mountPath: /usr/share/openscout
